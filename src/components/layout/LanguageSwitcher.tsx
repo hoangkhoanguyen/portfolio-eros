@@ -1,4 +1,4 @@
-import { Button } from "./ui";
+import { Button } from "../ui";
 import { Globe } from "lucide-react";
 
 export function LanguageSwitcher() {

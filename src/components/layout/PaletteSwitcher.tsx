@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "./ui";
+import { Button } from "../ui";
 import { Palette, X } from "lucide-react";
 import { useState } from "react";
 import { useThemeStore, themes } from "@/store/themeStore";
@@ -10,7 +10,7 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerTitle,
-} from "./ui/drawer";
+} from "../ui/drawer";
 import { cn } from "@/lib/utils";
 
 export function PaletteSwitcher() {

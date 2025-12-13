@@ -3,9 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "../ui";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { PaletteSwitcher } from "@/components/PaletteSwitcher";
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { PaletteSwitcher } from "@/components/layout/PaletteSwitcher";
 
 export function Header() {
   return (
