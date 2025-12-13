@@ -14,7 +14,7 @@ import {
 import { cn } from "@/lib/utils";
 
 export function PaletteSwitcher() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const { currentTheme, setTheme } = useThemeStore();
 
   return (
