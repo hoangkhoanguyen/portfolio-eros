@@ -8,7 +8,7 @@ const projects = [
     description:
       "Một nền tảng e-commerce đầy đủ tính năng với giao diện người dùng hiện đại, quản lý sản phẩm và tích hợp thanh toán.",
     image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1661288378926-30c78e59560c?w=800&h=600&fit=crop",
     link: "#",
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     description:
       "Xây dựng một blog cá nhân tối giản và tốc độ cao, tập trung vào trải nghiệm đọc và viết nội dung.",
     image:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
     link: "#",
   },
 ];

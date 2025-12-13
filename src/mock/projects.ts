@@ -1,0 +1,113 @@
+export interface ProjectImage {
+  url: string;
+  title: string;
+  subtitle: string;
+}
+
+export interface ProjectDetail {
+  id: string;
+  title: string;
+  slug: string;
+  description: string;
+  images: ProjectImage[];
+  projectInfo: {
+    status: string;
+    timeline: string;
+    technologies: string[];
+  };
+  content: string;
+  demoUrl?: string;
+  sourceUrl?: string;
+  tags: string[];
+}
+
+export const mockProjectDetail: ProjectDetail = {
+  id: "1",
+  title: "Tên dự án",
+  slug: "ten-du-an",
+  description: "Một dòng mô tả ngắn gọn và hấp dẫn về dự án.",
+  images: [
+    {
+      url: "https://images.unsplash.com/photo-1661288378926-30c78e59560c?w=800&h=600&fit=crop",
+      title: "Giao diện chính",
+      subtitle: "Thiết kế chính của ứng dụng",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
+      title: "Phân tích dữ liệu",
+      subtitle: "Màn hình hiển thị thống kê và biểu đồ",
+    },
+  ],
+  projectInfo: {
+    status: "Fullstack Developer",
+    timeline: "Tháng 8, 2023 - Tháng 12, 2023",
+    technologies: ["React", "Node.js", "Tailwind CSS", "PostgreSQL", "Docker"],
+  },
+  tags: ["React", "Node.js", "Tailwind CSS", "PostgreSQL", "Docker"],
+  demoUrl: "https://example.com/demo",
+  sourceUrl: "https://github.com/example/repo",
+  content: `Đây là một mô tả chi tiết về dự án, mình nói khá năng mà tên tôi sử dụng phong cách phát triển phần mềm dùng kỹ thuật và các công cụ hiện đại liên quan. Dự án có thể cải thiện năng lực để các công cụ sử dụng hiệu quả cùng cấp độ sử dụng.
+
+![Project Overview](https://images.unsplash.com/photo-1661288378926-30c78e59560c?w=800&h=400&fit=crop)
+
+## Mô tả dự án
+
+Đây là một mô tả chi tiết về dự án, mình nói khá năng mà tên tôi sử dụng phong cách phát triển phần mềm dùng kỹ thuật và các công cụ hiện đại liên quan. Dự án có thể cải thiện năng lực để các công cụ sử dụng hiệu quả cùng cấp độ sử dụng.
+
+## Tiêu đề Cấp 2: Tổng quan Kiến trúc
+
+Hệ thống được thiết kế theo mô hình Microservices, đảm bảo tính linh hoạt và khả năng mở rộng cao.
+
+![Architecture Diagram](https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=400&fit=crop)
+
+## Tiêu đề Cấp 3: Frontend Layer
+
+Sử dụng ReactJS kết hợp với Tailwind CSS để tạo giao diện đẹp và responsive.
+
+![Frontend UI](https://images.unsplash.com/photo-1661288378926-30c78e59560c?w=800&h=400&fit=crop)
+
+## Tiêu đề Cấp 4: Quản lý State
+
+## Tiêu đề Cấp 5: Redux Toolkit
+
+## Tiêu đề Cấp 6: Middleware Custom
+
+## Tài liệu tham khảo
+
+Một thông tin chi tiết với API có thể được tìm thấy trong [Tài liệu kỹ thuật](https://example.com). Mã nguồn mở được chia sẻ trên [GitHub Repository](https://github.com/example).
+
+## Trích dẫn
+
+> "Mục tiêu của thiết kế phải là dễ dàng cho các nhà phát triển sử dụng. Đó là chìa khóa định cao cấp tư tưởng về"
+> 
+> — Leonardo da Vinci (Phỏng tác)
+
+## Các tính năng nổi bật
+
+- **Real-time Data**: Đồng bộ dữ liệu người dùng theo thời gian thực sử dụng WebSocket.
+- **Analytics Dashboard**: Hỗ trợ báo cáo và thống kê tử dùng việc bảo vệ.
+- **Third-party Integration**: Tích hợp API thành viên với các bên để.
+
+## Mình hoa Mã nguồn (Code Snippet)
+
+\`\`\`javascript
+const jwt = require('jsonwebtoken');
+// Middleware xác thực
+const verifyToken = (req, res, next) => {
+  const token = req.headers['x-access-token'];
+  if (!token) {
+    return res.status(403).send({ message: 'No token provided' });
+  }
+  try {
+    const decoded = jwt.verify(token, process.env.SECRET);
+    req.userId = decoded.id;
+    next();
+  } catch (err) {
+    return res.status(401).send({ message: 'Unauthorized!' });
+  }
+};
+\`\`\`
+
+Quy trình phát triển tập trung vào trải nghiệm người dùng, đảm bảo hiệu suất cao và hỗ trợ đầy đủ. Các quy tắc giúp nhóm nhằng được thiết kế cho phía giám sát các yêu cầu chi tiết, giúp phối hợp tốt hơn trong quá trình phát triển.
+`,
+};
