@@ -15,9 +15,7 @@ export default function BlogsPage() {
 
   return (
     <div className="bg-background mt-20 p-5 max-w-[1440px] mx-auto">
-      <h1 className="text-4xl font-bold text-center pt-5 pb-3">
-        Trang Blog
-      </h1>
+      <h1 className="text-4xl font-bold text-center pt-5 pb-3">Trang Blog</h1>
       <p className="text-lg text-center pb-10">
         Chia sẻ kiến thức về phát triển web, công nghệ và con đường sự nghiệp.
       </p>
@@ -31,11 +29,7 @@ export default function BlogsPage() {
 
       {/* Pagination (CHỈ 1 DÒNG) */}
       <div className="mt-10">
-        <Pagination
-          page={page}
-          pageCount={pageCount}
-          onPageChange={setPage}
-        />
+        <Pagination page={page} pageCount={pageCount} onPageChange={setPage} />
       </div>
 
       {/* Button Contact */}
