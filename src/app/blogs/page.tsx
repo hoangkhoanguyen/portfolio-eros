@@ -1,20 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
 import { Pagination } from "@/components/ui/pagination";
 import { mockBlogDetail } from "@/mock/blog";
 import { Button } from "@/components/ui/button";
+import BlogCard from "@/components/ui/blog-card";
 
-const { title, coverImage, content, publishedAt } = mockBlogDetail;
-
-const TOTAL_BLOGS = 50;
+const TOTAL_BLOGS = mockBlogDetail.length;
 const PAGE_SIZE = 6;
 
 export default function BlogsPage() {
@@ -31,26 +23,9 @@ export default function BlogsPage() {
       </p>
 
       {/* Blog List */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {Array.from({ length: PAGE_SIZE }).map((_, index) => (
-          <Card key={index} className="overflow-hidden">
-            <img
-              src={coverImage}
-              alt={title}
-              className="h-48 w-full object-cover"
-            />
-
-            <CardHeader>
-              <CardTitle className="text-xl">{title}</CardTitle>
-              <CardDescription>
-                {content.substring(0, 150)}...
-              </CardDescription>
-            </CardHeader>
-
-            <CardContent className="text-sm text-muted-foreground">
-              {publishedAt}
-            </CardContent>
-          </Card>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
+        {mockBlogDetail.map((blog) => (
+          <BlogCard key={blog.id} blog={blog} />
         ))}
       </div>
 

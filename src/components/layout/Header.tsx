@@ -50,7 +50,7 @@ export function Header() {
                 Dự án
               </Link>
               <Link
-                href="#blog"
+                href="/blogs"
                 className="text-sm font-medium text-muted-foreground hover:text-primary-600 transition-colors"
               >
                 Blog

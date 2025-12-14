@@ -14,23 +14,24 @@ export interface BlogDetail {
   content: string;
 }
 
-export const mockBlogDetail: BlogDetail = {
-  id: "1",
-  title: "React Hooks have completely revolutionized how we write components",
-  slug: "react-hooks-guide",
-  author: {
-    name: "React Team",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
-  },
-  publishedAt: "2025-12-10",
-  readingTime: "7 phút đọc",
-  coverImage:
-    "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=1200&h=600&fit=crop",
-  tags: ["React", "Hooks", "JavaScript"],
-  excerpt:
-    "React Hooks have completely revolutionized how we write components. Gone are the days of complex class components and confusing lifecycle methods.",
-  content: `React Hooks have completely revolutionized how we write components. Gone are the days of complex class components and confusing lifecycle methods. In 2024, mastering hooks is not just an option—it's a necessity for any serious frontend developer looking to build scalable applications.
+export const mockBlogDetail: BlogDetail[] = [
+  {
+    id: "1",
+    title: "React Hooks have completely revolutionized how we write components",
+    slug: "react-hooks-guide",
+    author: {
+      name: "React Team",
+      avatar:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
+    },
+    publishedAt: "2025-12-10",
+    readingTime: "7 phút đọc",
+    coverImage:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+    tags: ["React", "Hooks", "JavaScript"],
+    excerpt:
+      "React Hooks have completely revolutionized how we write components. Gone are the days of complex class components and confusing lifecycle methods.",
+    content: `React Hooks have completely revolutionized how we write components. Gone are the days of complex class components and confusing lifecycle methods. In 2024, mastering hooks is not just an option—it's a necessity for any serious frontend developer looking to build scalable applications.
 
 In this article, we will explore the different types of hooks, when to use them, and how they can simplify your code structure significantly.
 
@@ -78,4 +79,26 @@ Don't forget to use useMemo and useCallback when passing functions to child comp
 
 Start gradually adopting hooks in your new components. There is no need to rewrite existing code immediately.
 `,
-};
+
+  },
+  {
+    id: "2",
+    title: "Hiểu nhanh về useEffect",
+    slug: "hieu-nhanh-useeffect",
+    author: {
+      name: "Frontend Dev",
+      avatar:
+        "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=150&h=150&fit=crop",
+    },
+    publishedAt: "2025-12-11",
+    readingTime: "3 phút đọc",
+    coverImage:
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop",
+    tags: ["React"],
+
+    excerpt: "Giải thích ngắn gọn về useEffect.",
+
+    content: "Short content...",
+  },
+]
+
