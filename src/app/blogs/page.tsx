@@ -3,13 +3,19 @@ import { Pagination } from "@/components/ui/pagination";
 import { mockBlogDetail } from "@/mock/blog";
 import BlogPostCard from "@/components/features/blogs-page/BlogPostCard";
 import { ButtonContact } from "@/components/layout/ButtonContact";
+import { PaginationWrapper } from "@/components/features/blogs-page/PaginationWrapper";
 
-const TOTAL_BLOGS = mockBlogDetail.length;
+interface BlogsPageProps {
+  searchParams?: { page?: string };
+}
+
 const PAGE_SIZE = 6;
 
-export default function BlogsPage() {
-  const page = 1;
-  const pageCount = Math.ceil(TOTAL_BLOGS / PAGE_SIZE);
+export default async function BlogsPage({ searchParams }: BlogsPageProps) {
+  const params = await searchParams;
+  const page = parseInt(params?.page ?? "1", 10);
+  const totalBlogs = mockBlogDetail.length;
+  const pageCount = Math.ceil(totalBlogs / PAGE_SIZE);
 
   return (
     <div className="container mx-auto bg-background mt-20 p-5">
@@ -27,7 +33,7 @@ export default function BlogsPage() {
 
       {/* Pagination */}
       <div className="mt-10">
-        <Pagination page={page} pageCount={pageCount}/>
+        <PaginationWrapper page={page} pageCount={pageCount}/>
       </div>
 
       {/* Button Contact */}

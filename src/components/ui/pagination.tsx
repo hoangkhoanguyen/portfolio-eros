@@ -51,7 +51,7 @@ function Pagination({
 }: React.ComponentProps<"nav"> & {
   page: number;
   pageCount: number;
-  onPageChange: (page: number) => void;
+  onPageChange?: (page: number) => void;
 }) {
   const buttons = generatePaginationButtons(page, pageCount);
   return (
@@ -72,7 +72,7 @@ function Pagination({
             tabIndex={page === 1 ? -1 : 0}
             onClick={(e: React.MouseEvent) => {
               e.preventDefault();
-              if (page > 1) onPageChange(page - 1);
+              if (page > 1) onPageChange?.(page - 1);
             }}
           />
         </li>
@@ -86,7 +86,7 @@ function Pagination({
                 aria-current={page === button ? "page" : undefined}
                 onClick={(e: React.MouseEvent) => {
                   e.preventDefault();
-                  if (page !== button) onPageChange(Number(button));
+                  if (page !== button) onPageChange?.(Number(button));
                 }}
               >
                 {button}
@@ -100,7 +100,7 @@ function Pagination({
             tabIndex={page === pageCount ? -1 : 0}
             onClick={(e: React.MouseEvent) => {
               e.preventDefault();
-              if (page < pageCount) onPageChange(page + 1);
+              if (page < pageCount) onPageChange?.(page + 1);
             }}
           />
         </li>
