@@ -5,14 +5,16 @@ import BlogPostCard from "@/components/features/blogs-page/BlogPostCard";
 import { ButtonContact } from "@/components/layout/QuickContact";
 import { PaginationWrapper } from "@/components/features/blogs-page/BlogPagination";
 
-interface BlogsPageProps {
-  searchParams?: { page?: string };
-}
-
 const PAGE_SIZE = 6;
 
+interface BlogsPageProps {
+  searchParams: Promise<{ page?: string;}>;
+}
+
 export default async function BlogsPage({ searchParams }: BlogsPageProps) {
+  
   const params = await searchParams;
+  console.log('params ---', params.page);
   const page = parseInt(params?.page ?? "1", 10);
   const totalBlogs = mockBlogDetail.length;
   const pageCount = Math.ceil(totalBlogs / PAGE_SIZE);
