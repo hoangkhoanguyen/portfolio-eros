@@ -2,7 +2,7 @@ import React from "react";
 import { Pagination } from "@/components/ui/pagination";
 import { mockBlogDetail } from "@/mock/blog";
 import BlogPostCard from "@/components/features/blogs-page/BlogPostCard";
-import { ButtonContact } from "@/components/layout/ButtonContact";
+import { ButtonContact } from "@/components/layout/QuickContact";
 import { PaginationWrapper } from "@/components/features/blogs-page/BlogPagination";
 
 interface BlogsPageProps {
@@ -37,7 +37,7 @@ export default async function BlogsPage({ searchParams }: BlogsPageProps) {
       </div>
 
       {/* Button Contact */}
-      <ButtonContact></ButtonContact>
+      <ButtonContact/>
     </div>
   );
 }
