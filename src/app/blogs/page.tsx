@@ -1,9 +1,6 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import { Pagination } from "@/components/ui/pagination";
 import { mockBlogDetail } from "@/mock/blog";
-import { Button } from "@/components/ui/button";
 import BlogPostCard from "@/components/features/blogs-page/BlogPostCard";
 import { ButtonContact } from "@/components/layout/ButtonContact";
 
@@ -11,7 +8,7 @@ const TOTAL_BLOGS = mockBlogDetail.length;
 const PAGE_SIZE = 6;
 
 export default function BlogsPage() {
-  const [page, setPage] = useState(1);
+  const page = 1;
   const pageCount = Math.ceil(TOTAL_BLOGS / PAGE_SIZE);
 
   return (
@@ -28,9 +25,9 @@ export default function BlogsPage() {
         ))}
       </div>
 
-      {/* Pagination (CHỈ 1 DÒNG) */}
+      {/* Pagination */}
       <div className="mt-10">
-        <Pagination page={page} pageCount={pageCount} onPageChange={setPage} />
+        <Pagination page={page} pageCount={pageCount}/>
       </div>
 
       {/* Button Contact */}
