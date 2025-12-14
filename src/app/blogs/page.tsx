@@ -5,6 +5,7 @@ import { Pagination } from "@/components/ui/pagination";
 import { mockBlogDetail } from "@/mock/blog";
 import { Button } from "@/components/ui/button";
 import BlogPostCard from "@/components/features/blogs-page/BlogPostCard";
+import { ButtonContact } from "@/components/layout/ButtonContact";
 
 const TOTAL_BLOGS = mockBlogDetail.length;
 const PAGE_SIZE = 6;
@@ -33,9 +34,7 @@ export default function BlogsPage() {
       </div>
 
       {/* Button Contact */}
-      <Button className="fixed bottom-6 right-6 z-50 rounded-full px-6 py-4 shadow-lg">
-        Liên hệ nhanh
-      </Button>
+      <ButtonContact></ButtonContact>
     </div>
   );
 }
