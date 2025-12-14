@@ -3,7 +3,7 @@ import { Pagination } from "@/components/ui/pagination";
 import { mockBlogDetail } from "@/mock/blog";
 import BlogPostCard from "@/components/features/blogs-page/BlogPostCard";
 import { ButtonContact } from "@/components/layout/ButtonContact";
-import { PaginationWrapper } from "@/components/features/blogs-page/PaginationWrapper";
+import { PaginationWrapper } from "@/components/features/blogs-page/BlogPagination";
 
 interface BlogsPageProps {
   searchParams?: { page?: string };
