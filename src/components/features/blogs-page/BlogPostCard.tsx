@@ -15,7 +15,7 @@ interface BlogCardProps {
     blog: BlogDetail;
 }
 
-export default function BlogCard({ blog }: BlogCardProps) {
+export default function BlogPostCard({ blog }: BlogCardProps) {
     return (
             <Card key={blog.id} className="group overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg relative">
                 <Link
