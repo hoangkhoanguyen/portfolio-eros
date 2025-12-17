@@ -1,7 +1,45 @@
 import React from "react";
+import { Pagination } from "@/components/ui/pagination";
+import { mockBlogDetail } from "@/mock/blog";
+import BlogPostCard from "@/components/features/blogs-page/BlogPostCard";
+import { ButtonContact } from "@/components/layout/QuickContact";
+import { PaginationWrapper } from "@/components/features/blogs-page/BlogPagination";
 
-const page = () => {
-  return <div>page</div>;
-};
+const PAGE_SIZE = 6;
 
-export default page;
+interface BlogsPageProps {
+  searchParams: Promise<{ page?: string;}>;
+}
+
+export default async function BlogsPage({ searchParams }: BlogsPageProps) {
+  
+  const params = await searchParams;
+  console.log('params ---', params.page);
+  const page = parseInt(params?.page ?? "1", 10);
+  const totalBlogs = mockBlogDetail.length;
+  const pageCount = Math.ceil(totalBlogs / PAGE_SIZE);
+
+  return (
+    <div className="container mx-auto bg-background mt-20 p-5">
+      <h1 className="text-4xl font-bold text-center pt-5 pb-3">Trang Blog</h1>
+      <p className="text-lg text-center pb-10">
+        Chia sẻ kiến thức về phát triển web, công nghệ và con đường sự nghiệp.
+      </p>
+
+      {/* Blog List */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
+        {mockBlogDetail.map((blog) => (
+          <BlogPostCard key={blog.id} blog={blog} />
+        ))}
+      </div>
+
+      {/* Pagination */}
+      <div className="mt-10">
+        <PaginationWrapper page={page} pageCount={pageCount}/>
+      </div>
+
+      {/* Button Contact */}
+      <ButtonContact/>
+    </div>
+  );
+}
