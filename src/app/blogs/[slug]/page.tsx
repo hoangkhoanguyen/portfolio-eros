@@ -42,7 +42,6 @@ export default async function BlogDetail({ params }: Props) {
         <PostMeta
           date={blog.publishedAt}
           readTime={blog.readingTime}
-          tag={blog.tags[0]}
         />
       </div>
 

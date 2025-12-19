@@ -13,13 +13,6 @@ export default function PostMeta({
 }: PostMetaProps) {
   return (
     <div className="flex flex-wrap items-center text-sm text-muted-foreground">
-        <>
-          <MetaItem icon={<Tag className="size-4" />}>
-            {tag}
-          </MetaItem>
-          <Bullet />
-        </>
-
       <MetaItem icon={<Calendar className="size-4" />}>
         {date}
       </MetaItem>
