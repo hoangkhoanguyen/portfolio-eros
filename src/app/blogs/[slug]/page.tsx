@@ -57,7 +57,7 @@ export default async function BlogDetail({ params }: Props) {
       </div>
 
       {/* Cover Image */}
-      <div className="relative w-full aspect-video max-w-7xl mx-auto">
+      <div className="relative w-full aspect-video">
         <Image
           src={blog.coverImage}
           alt={blog.title}
