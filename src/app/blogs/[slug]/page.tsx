@@ -25,7 +25,7 @@ export default async function BlogDetail({ params }: Props) {
   const tags = blog.tags
 
   return (
-    <div className="container mx-auto bg-background mt-20 p-5 max-w-7xl">
+    <div className="container mx-auto bg-background mt-20 p-5">
       {/* Breadcrumb */}
       <div className="py-2">
         <AppBreadcrumb
