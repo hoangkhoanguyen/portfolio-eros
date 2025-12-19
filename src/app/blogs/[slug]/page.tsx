@@ -4,11 +4,12 @@ import rehypeHighlight from "rehype-highlight";
 
 import AppBreadcrumb from "@/components/layout/AppBreadcrumb";
 import PostMeta from "@/components/features/blog-detail/PostMeta";
-import AuthorInfo from "@/components/features/blog-detail/AuthorInfo"; 4
-import { QuickContact } from "@/components/layout/QuickContact";
+import AuthorInfo from "@/components/features/blog-detail/AuthorInfo";
 import Image from "next/image";
 
 import { mockBlogDetail } from "@/mock/blog";
+import { Heart, Share2 } from "lucide-react";
+import BlogPostCard from "@/components/features/blogs-page/BlogPostCard";
 const BLOGS = mockBlogDetail;
 
 interface Props {
@@ -21,9 +22,10 @@ export default async function BlogDetail({ params }: Props) {
   if (!blog) {
     return <div className="container mx-auto bg-background mt-20 p-5">Blog not found</div>
   }
+  const tags = blog.tags
 
   return (
-    <div className="container mx-auto bg-background mt-20 p-5">
+    <div className="container mx-auto bg-background mt-20 p-5 max-w-7xl">
       {/* Breadcrumb */}
       <div className="py-2">
         <AppBreadcrumb
@@ -40,7 +42,7 @@ export default async function BlogDetail({ params }: Props) {
         <PostMeta
           date={blog.publishedAt}
           readTime={blog.readingTime}
-          tags={blog.tags}
+          tag={blog.tags[0]}
         />
       </div>
 
@@ -56,7 +58,7 @@ export default async function BlogDetail({ params }: Props) {
       </div>
 
       {/* Cover Image */}
-      <div className="relative w-full h-[700px]">
+      <div className="relative w-full h-[700px] ">
         <Image
           src={blog.coverImage}
           alt={blog.title}
@@ -67,45 +69,51 @@ export default async function BlogDetail({ params }: Props) {
       </div>
 
       {/* Post Content */}
-      <div className="
-            prose prose-lg max-w-none py-10 w-[80%] m-auto 
-            
-            text-zinc-800 
-            dark:text-zinc-200
-
-            /* HEADINGS */
-            prose-headings:text-blue-600
-            dark:prose-headings:text-blue-400
-
-            /* PARAGRAPH */
-            prose-p:text-zinc-700
-            dark:prose-p:text-zinc-300
-
-            /* INLINE CODE: useState */
-            prose-code:text-pink-600
-            dark:prose-code:text-pink-400
-            prose-code:bg-zinc-100
-            dark:prose-code:bg-zinc-800
-            prose-code:px-1 prose-code:rounded
-
-            /* LINK */
-            prose-a:text-blue-600
-            dark:prose-a:text-blue-400
-            prose-a:font-medium
-            hover:prose-a:underline
-
-            /* BLOCKQUOTE */
-            prose-blockquote:text-zinc-600
-            dark:prose-blockquote:text-zinc-400
-            prose-blockquote:border-l-blue-500
-      ">
+      <div className="post-content">
         <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
           {blog.content}
         </ReactMarkdown>
+
+        <div className="my-10 h-0.5 w-full bg-gray-700" />
+
+        <div className="flex justify-between">
+          <div className="flex gap-2">
+            {tags.map((tag) => (
+              <span key={tag} className="px-3 py-1 bg-gray-700 rounded-full text-sm  color-white">#{tag}</span>
+            ))}
+          </div>
+          <div className="flex items-center gap-6 text-sm text-muted-foreground">
+            <button
+              type="button"
+              className="flex items-center gap-2 hover:text-red-500 transition"
+            >
+              <Heart className="size-5" />
+              <span>124</span>
+            </button>
+
+            <button
+              type="button"
+              className="flex items-center gap-2 hover:text-blue-500 transition"
+            >
+              <Share2 className="size-5" />
+              <span>Share</span>
+            </button>
+          </div>
+
+        </div>
       </div>
 
-      {/* Quick Contact */}
-      <QuickContact />
+      <div className="my-10 h-0.5 w-full bg-gray-700" />
+
+      {/* Related Articles */}
+      <h2 className="py-10 text-3xl font-bold">Related Articles</h2>
+      
+      {/* Blog List */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
+        {mockBlogDetail.map((blog) => (
+          <BlogPostCard key={blog.id} blog={blog} />
+        ))}
+      </div>
     </div>
   )
 }

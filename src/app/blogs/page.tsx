@@ -37,9 +37,6 @@ export default async function BlogsPage({ searchParams }: BlogsPageProps) {
       <div className="mt-10">
         <PaginationWrapper page={page} pageCount={pageCount}/>
       </div>
-
-      {/* Quick Contact */}
-      <QuickContact/>
     </div>
   );
 }
