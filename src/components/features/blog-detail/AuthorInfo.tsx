@@ -19,9 +19,9 @@ export default function AuthorInfo({ name, avatar, publishedAt, readTime }: Auth
             />
             <div className=" flex flex-col gap-1">
                 <span className="text-lg text-foreground">{name}</span>
-                <div className="flex gap-1 items-center">
+                <div className="flex items-center">
                     <span className="text-sm text-gray-400 ">Ngày đăng {publishedAt}</span>
-                    <span className="mx-3 select-none text-gray-400">•</span>
+                    <span className="mx-3 select-none text-gray-400">&bull;</span>
                     <span className="text-sm text-gray-400 ">{readTime}</span>
                 </div>
             </div>
