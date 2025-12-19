@@ -71,11 +71,11 @@ Classes confuse both people and machines. Hooks let you split one component into
 
 Building your own hooks lets you extract component logic into reusable functions.
 
-### PERFORMANCE TIPS (HEADING 5)
+#### PERFORMANCE TIPS (HEADING 5)
 
 Don't forget to use useMemo and useCallback when passing functions to child components to avoid unnecessary re-renders.
 
-### FINAL THOUGHTS (HEADING 6)
+##### FINAL THOUGHTS (HEADING 6)
 
 Start gradually adopting hooks in your new components. There is no need to rewrite existing code immediately.
 `,

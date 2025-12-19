@@ -18,10 +18,11 @@ interface BlogCardProps {
 export default function BlogPostCard({ blog }: BlogCardProps) {
   return (
     <Card
-      key={blog.id}
+      key={blog.slug}
       className="group overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg relative"
     >
       <Link
+        key={blog.slug}
         href={`/blogs/${blog.slug}`}
         className="absolute inset-0 z-10"
         aria-label={blog.title}
