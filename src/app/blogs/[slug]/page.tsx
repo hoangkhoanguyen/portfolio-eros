@@ -3,7 +3,6 @@ import ReactMarkdown from "react-markdown"
 import rehypeHighlight from "rehype-highlight";
 
 import AppBreadcrumb from "@/components/layout/AppBreadcrumb";
-import PostMeta from "@/components/features/blog-detail/PostMeta";
 import AuthorInfo from "@/components/features/blog-detail/AuthorInfo";
 import Image from "next/image";
 
@@ -37,14 +36,6 @@ export default async function BlogDetail({ params }: Props) {
         />
       </div>
 
-      {/* Post Meta */}
-      <div className="py-10 flex align-center justify-center">
-        <PostMeta
-          date={blog.publishedAt}
-          readTime={blog.readingTime}
-        />
-      </div>
-
       {/* Post Title */}
       <h1 className="py-2 text-5xl font-bold text-center">{blog.title}</h1>
 
@@ -53,6 +44,8 @@ export default async function BlogDetail({ params }: Props) {
         <AuthorInfo
           name={blog.author.name}
           avatar={blog.author.avatar}
+          publishedAt={blog.publishedAt}
+          readTime={blog.readingTime}
         />
       </div>
 

@@ -3,9 +3,11 @@ import Image from "next/image"
 interface AuthorInfoProps {
     name: string
     avatar: string
+    publishedAt: string
+    readTime: string
 }
 
-export default function AuthorInfo({ name, avatar }: AuthorInfoProps) {
+export default function AuthorInfo({ name, avatar, publishedAt, readTime }: AuthorInfoProps) {
     return (
         <div className="flex items-center gap-5">
             <Image
@@ -15,7 +17,14 @@ export default function AuthorInfo({ name, avatar }: AuthorInfoProps) {
                 height={48}
                 className="rounded-full"
             />
-            <span className="text-lg text-foreground">{name}</span>
+            <div className=" flex flex-col gap-1">
+                <span className="text-lg text-foreground">{name}</span>
+                <div className="flex gap-1 items-center">
+                    <span className="text-sm text-gray-400 ">Ngày đăng {publishedAt}</span>
+                    <span className="mx-3 select-none text-gray-400">•</span>
+                    <span className="text-sm text-gray-400 ">{readTime}</span>
+                </div>
+            </div>
         </div>
     )
 }
