@@ -1,9 +1,9 @@
 import React from "react";
 import { Pagination } from "@/components/ui/pagination";
 import { mockBlogDetail } from "@/mock/blog";
-import BlogPostCard from "@/components/features/blogs-page/BlogPostCard";
+import BlogPostCard from "@/components/features/blogs/BlogPostCard";
 import { QuickContact } from "@/components/layout/QuickContact";
-import { PaginationWrapper } from "@/components/features/blogs-page/BlogPagination";
+import { PaginationWrapper } from "@/components/features/blogs/BlogPagination";
 
 const PAGE_SIZE = 6;
 

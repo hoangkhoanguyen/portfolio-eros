@@ -3,12 +3,12 @@ import ReactMarkdown from "react-markdown"
 import rehypeHighlight from "rehype-highlight";
 
 import AppBreadcrumb from "@/components/layout/AppBreadcrumb";
-import AuthorInfo from "@/components/features/blog-detail/AuthorInfo";
+import AuthorInfo from "@/components/features/blogs/AuthorInfo";
 import Image from "next/image";
 
 import { mockBlogDetail } from "@/mock/blog";
 import { Heart, Share2 } from "lucide-react";
-import BlogPostCard from "@/components/features/blogs-page/BlogPostCard";
+import BlogPostCard from "@/components/features/blogs/BlogPostCard";
 const BLOGS = mockBlogDetail;
 
 interface Props {
