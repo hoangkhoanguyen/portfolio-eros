@@ -3,7 +3,7 @@ import { Facebook, Github, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="mt-20 py-8 border-t border-border">
+    <footer className="container mx-auto mt-20 py-8 border-t border-border">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 px-4">
         <p className="text-sm text-muted-foreground">
           © 2024 Eros Nguyen. All rights reserved.

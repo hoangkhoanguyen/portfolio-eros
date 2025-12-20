@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { BlogDetail } from "@/mock/blog";
 import Link from "next/link";
+import { webRoutes } from "@/constants/route";
 
 interface BlogCardProps {
   blog: BlogDetail;
@@ -23,7 +24,7 @@ export default function BlogPostCard({ blog }: BlogCardProps) {
     >
       <Link
         key={blog.slug}
-        href={`/blogs/${blog.slug}`}
+        href={webRoutes.blogDetail({ slug: blog.slug })}
         className="absolute inset-0 z-10"
         aria-label={blog.title}
       />
