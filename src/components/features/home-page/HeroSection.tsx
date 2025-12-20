@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui";
+import { webRoutes } from "@/constants/route";
 
 export function HeroSection() {
   return (
@@ -16,10 +18,14 @@ export function HeroSection() {
           </div>
           <div className="flex flex-wrap gap-3">
             <Button size="lg" className="min-w-21">
-              Xem dự án
+              <Link href={webRoutes.projects()}>
+                Xem dự án
+              </Link>
             </Button>
             <Button variant="secondary" size="lg" className="min-w-21">
-              Liên hệ
+              <Link href="#contact">
+                Liên hệ
+              </Link>
             </Button>
           </div>
         </div>

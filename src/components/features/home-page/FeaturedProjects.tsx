@@ -1,3 +1,4 @@
+import { webRoutes } from "@/constants/route";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,7 +31,7 @@ export function FeaturedProjects() {
           Dự án nổi bật
         </h2>
         <Link
-          href="#projects"
+          href={webRoutes.projects()}
           className="text-primary-600 hover:text-primary-700 font-medium text-sm flex items-center gap-1 transition-colors"
         >
           Xem tất cả
@@ -60,7 +61,7 @@ export function FeaturedProjects() {
                 {project.description}
               </p>
               <Link
-                href={project.link}
+                href={webRoutes.projectDetail({ slug: project.link })}
                 className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-700 font-medium text-sm transition-colors"
               >
                 Xem chi tiết

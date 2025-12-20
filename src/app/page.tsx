@@ -2,7 +2,6 @@ import { HeroSection } from "@/components/features/home-page/HeroSection";
 import { AboutSection } from "@/components/features/home-page/AboutSection";
 import { TechStackSection } from "@/components/features/home-page/TechStackSection";
 import { FeaturedProjects } from "@/components/features/home-page/FeaturedProjects";
-import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -18,10 +17,6 @@ export default function Home() {
 
         <FeaturedProjects />
       </main>
-
-      <div className="mx-auto max-w-240 px-4">
-        <Footer />
-      </div>
     </div>
   );
 }

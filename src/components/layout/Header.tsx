@@ -6,14 +6,16 @@ import { Button } from "../ui";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { PaletteSwitcher } from "@/components/layout/PaletteSwitcher";
+import { webRoutes } from "@/constants/route";
+
 
 export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 text-foreground">
+          <Link href={webRoutes.home()} className="flex items-center gap-3 text-foreground">
             <div className="size-6 text-primary-600">
               <svg
                 fill="none"
@@ -44,19 +46,19 @@ export function Header() {
           <div className="hidden md:flex flex-1 justify-end items-center gap-8">
             <nav className="flex items-center gap-9">
               <Link
-                href="#projects"
+                href={webRoutes.projects()}
                 className="text-sm font-medium text-muted-foreground hover:text-primary-600 transition-colors"
               >
                 Dự án
               </Link>
               <Link
-                href="/blogs"
+                href={webRoutes.blogs()}
                 className="text-sm font-medium text-muted-foreground hover:text-primary-600 transition-colors"
               >
                 Blog
               </Link>
               <Link
-                href="#about"
+                href={webRoutes.aboutMe()}
                 className="text-sm font-medium text-muted-foreground hover:text-primary-600 transition-colors"
               >
                 Về tôi
