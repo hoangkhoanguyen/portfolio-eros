@@ -40,7 +40,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
                     <div className="flex items-center gap-4 mt-4">
                         {project.tags.map((tag) => (
-                            <span key={tag} className="text-xs bg-blue-500/30 text-blue-500 px-2 py-1 rounded-full">
+                            <span key={tag} className="text-xs bg-(--color-primary-main) text-white px-2 py-1 rounded-full">
                                 {tag}
                             </span>
                         ))}
@@ -52,7 +52,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     <a href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-blue-500 text-white text-base font-medium hover:bg-blue-600 transition"
+                        className="flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-(--color-primary-main) text-white text-base font-medium hover:bg-(--color-primary-dark) transition"
                     >
                         <ExternalLink size={16} />
                         Live Demo
