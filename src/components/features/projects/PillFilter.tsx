@@ -27,7 +27,7 @@ export default function PillFilter() {
             className={cn(
               "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition",
               isActive
-                ? "bg-(--color-primary-main) text-white hover:bg-[--color-primary-dark]"
+                ? "bg-(--color-primary-light) text-white hover:bg-[--color-primary-dark]"
                 : "bg-(--color-sidebar) text-[--color-muted-foreground] hover:bg-[--color-sidebar-accent]",
             )}
           >
