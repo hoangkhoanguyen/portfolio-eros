@@ -28,7 +28,7 @@ export const mockProjectDetail: ProjectDetail = {
   description: "Một dòng mô tả ngắn gọn và hấp dẫn về dự án.",
   images: [
     {
-      url: "https://images.unsplash.com/photo-1661288378926-30c78e59560c?w=800&h=600&fit=crop",
+      url: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
       title: "Giao diện chính",
       subtitle: "Thiết kế chính của ứng dụng",
     },

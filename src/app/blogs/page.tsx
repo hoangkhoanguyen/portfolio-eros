@@ -1,8 +1,6 @@
 import React from "react";
-import { Pagination } from "@/components/ui/pagination";
 import { mockBlogDetail } from "@/mock/blog";
 import BlogPostCard from "@/components/features/blogs/BlogPostCard";
-import { QuickContact } from "@/components/layout/QuickContact";
 import { PaginationWrapper } from "@/components/features/blogs/BlogPagination";
 
 const PAGE_SIZE = 6;
@@ -14,7 +12,6 @@ interface BlogsPageProps {
 export default async function BlogsPage({ searchParams }: BlogsPageProps) {
   
   const params = await searchParams;
-  console.log('params ---', params.page);
   const page = parseInt(params?.page ?? "1", 10);
   const totalBlogs = mockBlogDetail.length;
   const pageCount = Math.ceil(totalBlogs / PAGE_SIZE);
