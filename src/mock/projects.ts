@@ -46,9 +46,7 @@ export const mockProjectDetail: ProjectDetail = {
   tags: ["React", "Node.js", "Tailwind CSS", "PostgreSQL", "Docker"],
   demoUrl: "https://example.com/demo",
   sourceUrl: "https://github.com/example/repo",
-  content: `Đây là một mô tả chi tiết về dự án, mình nói khá năng mà tên tôi sử dụng phong cách phát triển phần mềm dùng kỹ thuật và các công cụ hiện đại liên quan. Dự án có thể cải thiện năng lực để các công cụ sử dụng hiệu quả cùng cấp độ sử dụng.
-
-![Project Overview](https://images.unsplash.com/photo-1661288378926-30c78e59560c?w=800&h=400&fit=crop)
+  content: `
 
 ## Mô tả dự án
 
