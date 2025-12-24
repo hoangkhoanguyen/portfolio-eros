@@ -36,9 +36,9 @@
   --color-secondary: var(--secondary);
   --color-primary-foreground: var(--primary-foreground);
   /* Dynamic primary colors - updated by ThemeContext */
-  --color-primary-main: var(--color-blue-600);
-  --color-primary-light: var(--color-blue-400);
-  --color-primary-dark: var(--color-blue-700);
+  --color-primary-main: var(--color-primary-main);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-dark: var(--color-primary-dark);
   /* Alias for compatibility */
   --color-primary: var(--color-primary-main);
   --color-popover-foreground: var(--popover-foreground);
@@ -172,18 +172,18 @@ button:not([disabled]) {
 
 @layer components {
   .post-content {
-    @apply prose prose-lg max-w-none py-10 w-[80%] m-auto
+    @apply prose prose-lg max-w-none py-3 w-full m-auto
            text-zinc-800 dark:text-zinc-200;
   }
 
   /* HEADINGS */
   .post-content :where(h1, h2, h3, h4, h5, h6) {
-    @apply text-blue-600 dark:text-blue-400;
+    @apply text-zinc-800 dark:text-zinc-200 hover:text-primary duration-300;
   }
 
   /* PARAGRAPH */
   .post-content p {
-    @apply text-zinc-700 dark:text-zinc-300;
+    @apply text-zinc-700 dark:text-zinc-300 my-2;
   }
 
   /* IMAGE */
@@ -193,19 +193,19 @@ button:not([disabled]) {
 
   /* INLINE CODE */
   .post-content code {
-    @apply text-pink-600 dark:text-pink-400
+    @apply text-primary
            bg-zinc-100 dark:bg-zinc-800
            px-1 rounded;
   }
 
   /* LINK */
   .post-content a {
-    @apply text-blue-600 dark:text-blue-400 font-medium hover:underline;
+    @apply text-primary font-medium hover:underline;
   }
 
   /* BLOCKQUOTE */
   .post-content blockquote {
     @apply text-zinc-600 dark:text-zinc-400
-           border-l-4 border-blue-500;
+           border-l-4 border-primary;
   }
 }

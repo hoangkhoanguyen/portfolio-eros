@@ -30,12 +30,27 @@ export const mockProjectDetail: ProjectDetail = {
     {
       url: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
       title: "Giao diện chính",
-      subtitle: "Thiết kế chính của ứng dụng",
+      subtitle: "Thiết kế chính c",
     },
     {
       url: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
       title: "Phân tích dữ liệu",
       subtitle: "Màn hình hiển thị thống kê và biểu đồ",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1661288378926-30c78e59560c?w=800&h=600&fit=crop",
+      title: "Quản lý người dùng",
+      subtitle: "Giao diện quản lý tài khoản và quyền truy cập",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
+      title: "Cài đặt hệ thống",
+      subtitle: "Màn hình cấu hình và tùy chỉnh",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+      title: "Bảng điều khiển",
+      subtitle: "Tổng quan về các hoạt động và trạng thái hệ thống",
     },
   ],
   projectInfo: {
@@ -48,7 +63,6 @@ export const mockProjectDetail: ProjectDetail = {
   sourceUrl: "https://github.com/example/repo",
   content: `
 
-## Mô tả dự án
 
 Đây là một mô tả chi tiết về dự án, mình nói khá năng mà tên tôi sử dụng phong cách phát triển phần mềm dùng kỹ thuật và các công cụ hiện đại liên quan. Dự án có thể cải thiện năng lực để các công cụ sử dụng hiệu quả cùng cấp độ sử dụng.
 

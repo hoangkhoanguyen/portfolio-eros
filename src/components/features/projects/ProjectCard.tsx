@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card
       key={project.slug}
-      className="group overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg relative"
+      className="group overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg relative pb-4"
     >
       <Link
         key={project.slug}
@@ -28,7 +28,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         className="inset-0 z-10"
         aria-label={project.title}
       >
-        <div className="relative h-48 w-full overflow-hidden">
+        <div className="relative aspect-video w-full overflow-hidden">
           <Image
             src={project.images[0].url}
             alt={project.title}
@@ -38,7 +38,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           />
         </div>
 
-        <CardHeader className="mt-2">
+        <CardHeader className="pt-4 px-4">
           <CardTitle className="text-xl line-clamp-2">
             {project.title}
           </CardTitle>
@@ -60,14 +60,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </CardHeader>
       </Link>
 
-      <CardAction className="w-full grid grid-cols-2 gap-4 px-6 mt-auto">
-        <Button asChild>
+      <CardAction className="w-full flex gap-3 px-4">
+        <Button asChild className="flex-1">
           <a href={project.demoUrl}>
             <ExternalLink size={16} />
             Live Demo
           </a>
         </Button>
-        <Button variant={"secondary"} asChild>
+        <Button variant={"secondary"} className="flex-1" asChild>
           <a href={project.sourceUrl}>
             <Code size={16} />
             Mã nguồn

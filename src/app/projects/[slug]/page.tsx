@@ -7,6 +7,7 @@ import AppBreadcrumb from "@/components/layout/AppBreadcrumb";
 import { mockProjectDetail } from "@/mock/projects";
 import GaleryCard from "@/components/features/projects/GaleryCard";
 import ProjectInfo from "@/components/features/projects/ProjectInfo";
+import GallerySlider from "@/components/features/projects/GallerySlider";
 
 export default async function ProjectDetail() {
   const project = mockProjectDetail;
@@ -24,21 +25,30 @@ export default async function ProjectDetail() {
       </div>
 
       {/* Post Title */}
-      <h1 className="py-2 text-5xl font-bold">{project.title}</h1>
-      <p className="text-lg pb-10">{project.description}</p>
+      <h1 className="py-2 text-5xl font-bold hover:text-primary duration-300">
+        {project.title}
+      </h1>
+      <p className="text-lg pb-10 text-muted-foreground">
+        {project.description}
+      </p>
 
       <div className="grid grid-cols-10 gap-6">
         {/* Left */}
-        <div className="col-span-7 rounded-xl shadow">
-          <h2 className="text-3xl">Thư viện ảnh</h2>
-          <div className="flex items-center gap-4 mt-4 w-full overflow-hidden">
-            {project.images.map((galery) => (
-              <div className="w-[30%] shrink-0">
-                <GaleryCard galery={galery} />
-              </div>
-            ))}
+        <div className="col-span-7 rounded-xl">
+          <h2 className="text-3xl font-bold mb-4 hover:text-primary duration-300">
+            Thư viện ảnh
+          </h2>
+          <div className="mb-10">
+            <GallerySlider>
+              {project.images.map((galery) => (
+                <GaleryCard galery={galery} key={galery.url} />
+              ))}
+            </GallerySlider>
           </div>
-          <div className="post-content m-1">
+          <h2 className="text-3xl font-bold hover:text-primary duration-300">
+            Mô tả dự án
+          </h2>
+          <div className="post-content">
             <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
               {project.content}
             </ReactMarkdown>
@@ -46,8 +56,8 @@ export default async function ProjectDetail() {
         </div>
 
         {/* Right */}
-        <div className="col-span-3 rounded-xl shadow">
-          <ProjectInfo project={project}/>
+        <div className="col-span-3 rounded-xl">
+          <ProjectInfo project={project} />
         </div>
       </div>
     </div>
