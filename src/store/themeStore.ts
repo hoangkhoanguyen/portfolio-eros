@@ -46,9 +46,9 @@ const applyTheme = (themeName: string) => {
   if (!theme || typeof window === "undefined") return;
 
   const root = document.documentElement;
-  root.style.setProperty("--color-primary-main", theme.colors.primary);
-  root.style.setProperty("--color-primary-light", theme.colors.primaryLight);
-  root.style.setProperty("--color-primary-dark", theme.colors.primaryDark);
+  root.style.setProperty("--pallete-primary-main", theme.colors.primary);
+  root.style.setProperty("--pallete-primary-light", theme.colors.primaryLight);
+  root.style.setProperty("--pallete-primary-dark", theme.colors.primaryDark);
 };
 
 type ThemeStore = {
@@ -75,6 +75,6 @@ export const useThemeStore = create<ThemeStore>()(
           applyTheme(state.currentTheme);
         }
       },
-    }
-  )
+    },
+  ),
 );

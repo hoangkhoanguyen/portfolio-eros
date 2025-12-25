@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import { Header } from "@/components/layout/Header";
 import { QuickContact } from "@/components/layout/QuickContact";
 import { Footer } from "@/components/layout/Footer";
+import { ThemeInitializer } from "@/components/providers/ThemeInitializer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
+          <ThemeInitializer />
           <Header />
           {children}
           <Footer />
