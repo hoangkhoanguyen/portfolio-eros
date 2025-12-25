@@ -123,3 +123,12 @@ const verifyToken = (req, res, next) => {
 Quy trình phát triển tập trung vào trải nghiệm người dùng, đảm bảo hiệu suất cao và hỗ trợ đầy đủ. Các quy tắc giúp nhóm nhằng được thiết kế cho phía giám sát các yêu cầu chi tiết, giúp phối hợp tốt hơn trong quá trình phát triển.
 `,
 };
+
+export const mockProject2Details: ProjectDetail = {
+  ...mockProjectDetail,
+  id: "2",
+  title: "Dự án Thứ hai ba tuwj aml fns lkms lkma;e ;lmv;ls",
+  slug: "du-an-thu-hai",
+  description:
+    "Mô tả ngắn gọn về dự án thứ hai với các tính năng nổi bật và công nghệ sử dụng.",
+};

@@ -40,7 +40,9 @@ export default function BlogPostCard({ blog }: BlogCardProps) {
       </div>
 
       <CardHeader>
-        <CardTitle className="text-xl line-clamp-2">{blog.title}</CardTitle>
+        <CardTitle className="text-xl line-clamp-2 group-hover:text-primary duration-300">
+          {blog.title}
+        </CardTitle>
 
         <CardDescription className="line-clamp-2">
           {blog.excerpt}

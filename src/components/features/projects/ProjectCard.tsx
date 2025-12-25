@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { webRoutes } from "@/constants/route";
 import { Button } from "@/components/ui";
+import TechTag from "./TechTag";
 
 interface ProjectCardProps {
   project: ProjectDetail;
@@ -39,22 +40,17 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <CardHeader className="pt-4 px-4">
-          <CardTitle className="text-xl line-clamp-2">
+          <CardTitle className="text-xl line-clamp-1 group-hover:text-primary-light duration-300">
             {project.title}
           </CardTitle>
 
-          <CardDescription className="line-clamp-2">
+          <CardDescription className="line-clamp-2 block h-10">
             {project.description}
           </CardDescription>
 
           <div className="flex items-center gap-4 mt-4 w-full overflow-hidden">
             {project.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-xs bg-(--color-primary-light) text-white px-2 py-1 rounded-full whitespace-nowrap"
-              >
-                {tag}
-              </span>
+              <TechTag key={tag}>{tag}</TechTag>
             ))}
           </div>
         </CardHeader>

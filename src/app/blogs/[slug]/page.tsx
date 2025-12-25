@@ -1,5 +1,5 @@
 import React from "react";
-import ReactMarkdown from "react-markdown"
+import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 
 import AppBreadcrumb from "@/components/layout/AppBreadcrumb";
@@ -17,11 +17,15 @@ interface Props {
 
 export default async function BlogDetail({ params }: Props) {
   const resolvedParams = await params;
-  const blog = BLOGS.find((b) => b.slug === resolvedParams.slug)
+  const blog = BLOGS.find((b) => b.slug === resolvedParams.slug);
   if (!blog) {
-    return <div className="container mx-auto bg-background mt-20 p-5">Blog not found</div>
+    return (
+      <div className="container mx-auto bg-background mt-20 p-5">
+        Blog not found
+      </div>
+    );
   }
-  const tags = blog.tags
+  const tags = blog.tags;
 
   return (
     <div className="container mx-auto bg-background mt-20 p-5">
@@ -71,7 +75,12 @@ export default async function BlogDetail({ params }: Props) {
         <div className="flex justify-between">
           <div className="flex gap-2">
             {tags.map((tag) => (
-              <span key={tag} className="px-3 py-1 bg-gray-700 rounded-full text-sm  color-white">#{tag}</span>
+              <span
+                key={tag}
+                className="px-3 py-1 bg-primary-light text-primary-dark rounded-full text-sm  color-white"
+              >
+                #{tag}
+              </span>
             ))}
           </div>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
@@ -91,7 +100,6 @@ export default async function BlogDetail({ params }: Props) {
               <span>Share</span>
             </button>
           </div>
-
         </div>
       </div>
 
@@ -99,7 +107,7 @@ export default async function BlogDetail({ params }: Props) {
 
       {/* Related Articles */}
       <h2 className="py-10 text-3xl font-bold">Related Articles</h2>
-      
+
       {/* Blog List */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
         {mockBlogDetail.map((blog) => (
@@ -107,5 +115,5 @@ export default async function BlogDetail({ params }: Props) {
         ))}
       </div>
     </div>
-  )
+  );
 }
