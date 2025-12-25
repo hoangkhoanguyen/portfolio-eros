@@ -30,12 +30,27 @@ export const mockProjectDetail: ProjectDetail = {
     {
       url: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
       title: "Giao diện chính",
-      subtitle: "Thiết kế chính của ứng dụng",
+      subtitle: "Thiết kế chính c",
     },
     {
       url: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop",
       title: "Phân tích dữ liệu",
       subtitle: "Màn hình hiển thị thống kê và biểu đồ",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1661288378926-30c78e59560c?w=800&h=600&fit=crop",
+      title: "Quản lý người dùng",
+      subtitle: "Giao diện quản lý tài khoản và quyền truy cập",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
+      title: "Cài đặt hệ thống",
+      subtitle: "Màn hình cấu hình và tùy chỉnh",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+      title: "Bảng điều khiển",
+      subtitle: "Tổng quan về các hoạt động và trạng thái hệ thống",
     },
   ],
   projectInfo: {
@@ -46,11 +61,8 @@ export const mockProjectDetail: ProjectDetail = {
   tags: ["React", "Node.js", "Tailwind CSS", "PostgreSQL", "Docker"],
   demoUrl: "https://example.com/demo",
   sourceUrl: "https://github.com/example/repo",
-  content: `Đây là một mô tả chi tiết về dự án, mình nói khá năng mà tên tôi sử dụng phong cách phát triển phần mềm dùng kỹ thuật và các công cụ hiện đại liên quan. Dự án có thể cải thiện năng lực để các công cụ sử dụng hiệu quả cùng cấp độ sử dụng.
+  content: `
 
-![Project Overview](https://images.unsplash.com/photo-1661288378926-30c78e59560c?w=800&h=400&fit=crop)
-
-## Mô tả dự án
 
 Đây là một mô tả chi tiết về dự án, mình nói khá năng mà tên tôi sử dụng phong cách phát triển phần mềm dùng kỹ thuật và các công cụ hiện đại liên quan. Dự án có thể cải thiện năng lực để các công cụ sử dụng hiệu quả cùng cấp độ sử dụng.
 
@@ -110,4 +122,13 @@ const verifyToken = (req, res, next) => {
 
 Quy trình phát triển tập trung vào trải nghiệm người dùng, đảm bảo hiệu suất cao và hỗ trợ đầy đủ. Các quy tắc giúp nhóm nhằng được thiết kế cho phía giám sát các yêu cầu chi tiết, giúp phối hợp tốt hơn trong quá trình phát triển.
 `,
+};
+
+export const mockProject2Details: ProjectDetail = {
+  ...mockProjectDetail,
+  id: "2",
+  title: "Dự án Thứ hai ba tuwj aml fns lkms lkma;e ;lmv;ls",
+  slug: "du-an-thu-hai",
+  description:
+    "Mô tả ngắn gọn về dự án thứ hai với các tính năng nổi bật và công nghệ sử dụng.",
 };

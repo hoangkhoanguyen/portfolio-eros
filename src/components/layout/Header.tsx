@@ -7,7 +7,7 @@ import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { PaletteSwitcher } from "@/components/layout/PaletteSwitcher";
 import { webRoutes } from "@/constants/route";
-
+import { BatteryFull } from "lucide-react";
 
 export function Header() {
   return (
@@ -15,27 +15,12 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
           {/* Logo */}
-          <Link href={webRoutes.home()} className="flex items-center gap-3 text-foreground">
+          <Link
+            href={webRoutes.home()}
+            className="flex items-center gap-3 text-primary"
+          >
             <div className="size-6 text-primary-600">
-              <svg
-                fill="none"
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clipPath="url(#clip0_6_330)">
-                  <path
-                    clipRule="evenodd"
-                    d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
-                    fill="currentColor"
-                    fillRule="evenodd"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_6_330">
-                    <rect fill="white" height="48" width="48" />
-                  </clipPath>
-                </defs>
-              </svg>
+              <BatteryFull />
             </div>
             <h2 className="text-lg font-bold leading-tight tracking-tight">
               Eros Nguyen
@@ -47,19 +32,19 @@ export function Header() {
             <nav className="flex items-center gap-9">
               <Link
                 href={webRoutes.projects()}
-                className="text-sm font-medium text-muted-foreground hover:text-primary-600 transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 Dự án
               </Link>
               <Link
                 href={webRoutes.blogs()}
-                className="text-sm font-medium text-muted-foreground hover:text-primary-600 transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 Blog
               </Link>
               <Link
                 href={webRoutes.aboutMe()}
-                className="text-sm font-medium text-muted-foreground hover:text-primary-600 transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 Về tôi
               </Link>
