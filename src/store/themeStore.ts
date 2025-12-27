@@ -30,7 +30,7 @@ export const themes: Record<string, ThemeColor> = {
     },
     optionClassName: "bg-gradient-to-br from-green-600 to-green-400",
   },
-  sunset: {
+  orange: {
     name: "sunset",
     colors: {
       primary: "var(--color-orange-600)",
@@ -42,10 +42,19 @@ export const themes: Record<string, ThemeColor> = {
 };
 
 const applyTheme = (themeName: string) => {
-  const theme = themes[themeName];
-  if (!theme || typeof window === "undefined") return;
+  if (typeof window === "undefined") return;
 
   const root = document.documentElement;
+  const theme = themes[themeName];
+
+  if (!theme) return;
+
+  if (themeName === "default") {
+    root.removeAttribute("data-theme");
+  } else {
+    root.setAttribute("data-theme", themeName);
+  }
+
   root.style.setProperty("--pallete-primary-main", theme.colors.primary);
   root.style.setProperty("--pallete-primary-light", theme.colors.primaryLight);
   root.style.setProperty("--pallete-primary-dark", theme.colors.primaryDark);
