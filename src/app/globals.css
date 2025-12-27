@@ -87,9 +87,9 @@
   --sidebar-ring: oklch(0.705 0.015 286.067);
 
   /* Default palette colors - will be overridden by JS theme switcher */
-  --pallete-primary-main: var(--color-zinc-600);
-  --pallete-primary-light: var(--color-zinc-400);
-  --pallete-primary-dark: var(--color-zinc-700);
+  --pallete-primary-main: #2563eb;
+  --pallete-primary-light: #60a5fa;
+  --pallete-primary-dark: #1d4ed8;
 
   --pallete-background-light: #f6f7f8;
   --pallete-background-dark: #101822;
@@ -98,6 +98,10 @@
 }
 
 [data-theme="green"] {
+  --pallete-primary-main: #16a34a;
+  --pallete-primary-light: #4ade80;
+  --pallete-primary-dark: #15803d;
+
   --pallete-background-light: #f8fafc;
   --pallete-background-dark: #0f1c15;
   --pallete-surface-light: #ffffff;
@@ -105,6 +109,10 @@
 }
 
 [data-theme="orange"] {
+  --pallete-primary-main: #ea580c;
+  --pallete-primary-light: #fb923c;
+  --pallete-primary-dark: #c2410c;
+  
   --pallete-background-light: #fffaf5;
   --pallete-background-dark: #1c1917;
   --pallete-surface-light: #ffffff;
