@@ -53,9 +53,9 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: var(--pallete-background-light);
   --foreground: oklch(0.141 0.005 285.823);
-  --card: oklch(1 0 0);
+  --card: var(--pallete-surface-light);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
@@ -87,15 +87,42 @@
   --sidebar-ring: oklch(0.705 0.015 286.067);
 
   /* Default palette colors - will be overridden by JS theme switcher */
-  --pallete-primary-main: var(--color-zinc-600);
-  --pallete-primary-light: var(--color-zinc-400);
-  --pallete-primary-dark: var(--color-zinc-700);
+  --pallete-primary-main: #2563eb;
+  --pallete-primary-light: #60a5fa;
+  --pallete-primary-dark: #1d4ed8;
+
+  --pallete-background-light: #f6f7f8;
+  --pallete-background-dark: #101822;
+  --pallete-surface-light: #ffffff;
+  --pallete-surface-dark: #1a222c;
+}
+
+[data-theme="green"] {
+  --pallete-primary-main: #16a34a;
+  --pallete-primary-light: #4ade80;
+  --pallete-primary-dark: #15803d;
+
+  --pallete-background-light: #f8fafc;
+  --pallete-background-dark: #0f1c15;
+  --pallete-surface-light: #ffffff;
+  --pallete-surface-dark: #1b2922;
+}
+
+[data-theme="orange"] {
+  --pallete-primary-main: #ea580c;
+  --pallete-primary-light: #fb923c;
+  --pallete-primary-dark: #c2410c;
+  
+  --pallete-background-light: #fffaf5;
+  --pallete-background-dark: #1c1917;
+  --pallete-surface-light: #ffffff;
+  --pallete-surface-dark: #292524;
 }
 
 .dark {
-  --background: oklch(0.141 0.005 285.823);
+  --background: var(--pallete-background-dark);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.21 0.006 285.885);
+  --card: var(--pallete-surface-dark);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.985 0 0);
